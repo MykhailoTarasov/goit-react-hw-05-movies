@@ -3,7 +3,7 @@ import Loader from 'components/Loader/Loader';
 import OneMovieDetails from 'components/OneMovieDetails/OneMovieDetails';
 import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Outlet, useParams } from 'react-router-dom';
+import { Link as RouterLink, Outlet, useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
   const [moviesDetails, setMoviesDetails] = useState([]);
@@ -33,6 +33,13 @@ const MovieDetails = () => {
   return (
     <div>
       <OneMovieDetails data={moviesDetails}/>
+      <div>
+        <p>Additional informacion</p>
+        <ul>
+            <RouterLink to='cast'>Cast</RouterLink>
+            <RouterLink to='reviews'>Reviews</RouterLink>
+        </ul>
+      </div>
 
       <Outlet />
 

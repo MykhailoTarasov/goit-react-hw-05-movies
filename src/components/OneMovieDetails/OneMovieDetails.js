@@ -4,16 +4,11 @@ const OneMovieDetails = ({ data }) => {
 
   const releaseYear = release_date ? release_date.slice(0, 4) : null;
   const userScore = Math.ceil(vote_average * 10);
-  const defaultImg =
-    'https://ukraine.ua/wp-content/uploads/2023/03/prapor-ukrayiny-ukrayina-majdan-nezalezhnosti.jpg';
+
   return (
     <div>
       <img
-        src={
-          poster_path
-            ? `https://image.tmdb.org/t/p/w500${poster_path}`
-            : defaultImg
-        }
+        src={`https://image.tmdb.org/t/p/w500${poster_path}`}
         width={250}
         alt="poster"
       />
