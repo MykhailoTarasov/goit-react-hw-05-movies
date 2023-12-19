@@ -1,9 +1,9 @@
-const MoviesList = ({ trendingMovies }) => {
+const MoviesList = ({ movies }) => {
   const defaultImg =
     'https://ukraine.ua/wp-content/uploads/2023/03/prapor-ukrayiny-ukrayina-majdan-nezalezhnosti.jpg';
 
   return <ul>
-  {trendingMovies.map(movie => (
+  {movies.map(movie => (
     <li key={movie.id}>
       <a href=" ">
         <img

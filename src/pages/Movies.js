@@ -50,7 +50,7 @@ const Movies = () => {
       <SearchBar onSubmit={updateSearchParams} />
       {searchMovies.length > 0 && <MoviesList movies={searchMovies} />}
 
-      {error && <span>Whoops... Error! Please, reload this page!</span>}
+      {error && <span>Error! Please, reload this page!</span>}
 
       {isLoading && <Loader />}
       <Toaster position="top-right" />

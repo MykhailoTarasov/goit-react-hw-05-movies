@@ -27,9 +27,9 @@ const Home = () => {
   return (
     <div>
       <h2>Trending movies</h2>
-      <MoviesList trendingMovies={trendingMovies} />
+      <MoviesList movies={trendingMovies} />
 
-      {error && <span>Whoops... Error! Please, reload this page!</span>}
+      {error && <span>Error! Please, reload this page!</span>}
 
       {isLoading && <Loader />}
     </div>
