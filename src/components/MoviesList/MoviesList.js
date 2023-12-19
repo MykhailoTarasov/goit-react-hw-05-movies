@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const MoviesList = ({ movies }) => {
   const defaultImg =
     'https://ukraine.ua/wp-content/uploads/2023/03/prapor-ukrayiny-ukrayina-majdan-nezalezhnosti.jpg';
@@ -5,7 +7,7 @@ const MoviesList = ({ movies }) => {
   return <ul>
   {movies.map(movie => (
     <li key={movie.id}>
-      <a href=" ">
+      <NavLink to={`/movies/${movie.id}`}>
         <img
           src={
             movie.poster_path
@@ -16,7 +18,7 @@ const MoviesList = ({ movies }) => {
           alt="poster"
         />
         <h2>{movie.title}</h2>
-      </a>
+      </NavLink>
     </li>
   ))}
 </ul>
