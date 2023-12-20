@@ -4,7 +4,7 @@ import MoviesList from 'components/MoviesList/MoviesList';
 import SearchBar from 'components/SearchBar/SearchBar';
 import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Link, useSearchParams } from 'react-router-dom';
+import {  useSearchParams } from 'react-router-dom';
 
 const Movies = () => {
   const [searchMovies, setSearchMovies] = useState([]);
@@ -47,9 +47,7 @@ const Movies = () => {
 
   return (
     <div>
-      <Link to="/">
-        <button>Back</button>
-      </Link>
+      
       <SearchBar onSubmit={updateSearchParams} />
       {searchMovies.length > 0 && <MoviesList movies={searchMovies} />}
 

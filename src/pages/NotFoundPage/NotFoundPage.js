@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+
+import { StyledLink } from './NotFoundPage.Styled';
 
 const NotFoundPage = () => {
   return (
     <span>
       Sorry, something went wrong. Click the link to go to the{' '}
-      <Link to="/">home page</Link>.
+      <StyledLink to="/">home page</StyledLink>.
     </span>
   );
 };

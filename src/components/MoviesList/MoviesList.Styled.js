@@ -8,7 +8,7 @@ flex-direction: column;
 list-style: none;
 justify-content: center;
 align-items: flex-begin;
-gap: 5px;
+gap: 10px;
 
 margin: 0;
 padding-left: 20px;
