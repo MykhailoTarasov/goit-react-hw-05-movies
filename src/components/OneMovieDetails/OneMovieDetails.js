@@ -11,9 +11,11 @@ import {
   StyledNavLink,
 } from './OneMovieDetails.Styled';
 import { FaBackwardStep } from 'react-icons/fa6';
+import { useRef } from 'react';
 
 const OneMovieDetails = ({ data }) => {
   const location = useLocation();
+  const backLinkLocation = useRef(location.state?.from ?? '/');
 
   const { title, overview, vote_average, poster_path, release_date, genres } =
     data;
@@ -23,7 +25,8 @@ const OneMovieDetails = ({ data }) => {
 
   return (
     <Container>
-      <StyledNavLink to={location.state?.from ?? '/quizzes'}>
+      <StyledNavLink to={backLinkLocation.current}>
+      {' '}
         <StyledBackButton>
           <FaBackwardStep />
         </StyledBackButton>
