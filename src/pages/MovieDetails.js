@@ -3,13 +3,20 @@ import Loader from 'components/Loader/Loader';
 import OneMovieDetails from 'components/OneMovieDetails/OneMovieDetails';
 import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Link as RouterLink, Outlet, useParams } from 'react-router-dom';
+import {
+  Outlet,
+  useParams,
+  useLocation,
+  Link,
+} from 'react-router-dom';
 
 const MovieDetails = () => {
   const [moviesDetails, setMoviesDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
   const { movieId } = useParams();
+  const location = useLocation();
+
 
   useEffect(() => {
     if (!movieId) return;
@@ -32,12 +39,16 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <OneMovieDetails data={moviesDetails}/>
+      <Link to={location.state?.from ?? '/quizzes'}>
+        <button>Back</button>
+      </Link>
+
+      <OneMovieDetails data={moviesDetails} />
       <div>
         <p>Additional informacion</p>
         <ul>
-            <RouterLink to='cast'>Cast</RouterLink>
-            <RouterLink to='reviews'>Reviews</RouterLink>
+          <Link to="cast">Cast</Link>
+          <Link to="reviews">Reviews</Link>
         </ul>
       </div>
 
