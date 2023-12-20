@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Title>Trending movies</Title>
+      <Title>Trending today</Title>
       <MoviesList movies={trendingMovies} />
 
       {error && <span>Error! Please, reload this page!</span>}

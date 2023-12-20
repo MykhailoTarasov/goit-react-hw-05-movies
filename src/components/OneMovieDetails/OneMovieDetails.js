@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import {
+  AddList,
   AddStyledNavLink,
   AditionalInfo,
   Container,
@@ -50,14 +51,14 @@ const OneMovieDetails = ({ data }) => {
       </Main>
       <AditionalInfo>
         <h3>Additional informacion</h3>
-        <ul>
+        <AddList>
           <li>
             <AddStyledNavLink to="cast">Cast</AddStyledNavLink>
           </li>
           <li>
             <AddStyledNavLink to="reviews">Reviews</AddStyledNavLink>
           </li>
-        </ul>
+        </AddList>
       </AditionalInfo>
     </Container>
   );

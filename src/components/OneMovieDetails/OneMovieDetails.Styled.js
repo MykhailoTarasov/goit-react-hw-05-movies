@@ -49,3 +49,7 @@ font-weight: 500;
 export const GenresList = styled.ul`
 padding: 0;
 `
+
+export const AddList = styled.ul`
+padding-left: 20px;
+`

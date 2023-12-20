@@ -10,6 +10,8 @@ export const Header = styled.header`
   height: 50px;
 
   border-bottom: 1px solid #f8edeb;
+
+  backdrop-filter: blur(2px);
 `;
 
 export const Nav = styled.nav`
