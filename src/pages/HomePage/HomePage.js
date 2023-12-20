@@ -1,7 +1,9 @@
 import { serviceTrendingMovies } from 'api';
+import { Container } from 'components/Layout/Layout.Styled';
 import Loader from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
+import { Title } from './HomePage.Styled';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -25,14 +27,14 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Trending movies</h2>
+    <Container>
+      <Title>Trending movies</Title>
       <MoviesList movies={trendingMovies} />
 
       {error && <span>Error! Please, reload this page!</span>}
 
       {isLoading && <Loader />}
-    </div>
+    </Container>
   );
 };
 
